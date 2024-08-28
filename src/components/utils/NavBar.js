@@ -43,14 +43,7 @@ function NavBar() {
               Dashboard...
             </Link>
 
-            <Link to="/Favorite">
-              <FavoriteBorderIcon sx={{ fontSize: 24 }} />
-              {likeData.length > 0 && (
-                <Badge pill bg="danger">
-                  +
-                </Badge>
-              )}
-            </Link>
+
 
             {userInfo ? (
               <Link to="/profile" className="Nav nava NavDropdown">
