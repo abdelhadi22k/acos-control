@@ -5,7 +5,6 @@ import { userSignin } from "../redux/user/UserAction";
 import { Helmet } from "react-helmet-async";
 import domain from "../utils/config";
 
-
 function SingIn() {
   const navigate = useNavigate();
 
@@ -33,12 +32,15 @@ function SingIn() {
   };
 
   return (
-    <Container className="Container">
+    <Container className="signIn-container">
       <Helmet>
         <title> Sign In</title>
       </Helmet>
-      <div className="mainContainers">
-        <div className="input">
+
+      <div className="form-wrapper">
+        <h2 className="form-title">Sign In</h2>
+
+        <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
             id="email"
@@ -50,7 +52,7 @@ function SingIn() {
           />
         </div>
 
-        <div className="input">
+        <div className="form-group">
           <label htmlFor="password">Password</label>
           <input
             id="password"
@@ -62,14 +64,17 @@ function SingIn() {
           />
         </div>
 
-        <div className="submit">
-          <button type="submit" className="btnsub" onClick={handelsubmit}>
+        <div className="form-actions">
+          <button
+            type="submit"
+            className="submit-button"
+            onClick={handelsubmit}
+          >
             Sign In
           </button>
 
-          <Link className="naveget" to={"/singup"}>
-            {" "}
-            You don't have account{" "}
+          <Link className="sign-up-link" to={"/singup"}>
+            Don't have an account? Sign Up
           </Link>
         </div>
       </div>
