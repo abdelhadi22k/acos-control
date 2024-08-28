@@ -33,13 +33,13 @@ function SingUp() {
   };
 
   return (
-    <Container className="Container">
+    <Container className="signUp-container">
       <Helmet>
         <title>Sign Up</title>
       </Helmet>
-      <div className="mainContainers">
-        
-        <div className="input">
+      <div className="form-wrapper">
+      <h2 className="form-title">Create Your Account</h2>
+        <div className="form-group">
           <label htmlFor="title">Username</label>
           <input
             id="name"
@@ -51,7 +51,7 @@ function SingUp() {
           />
         </div>
 
-        <div className="input">
+        <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
             id="email"
@@ -62,7 +62,7 @@ function SingUp() {
             onChange={(event) => setEmail(event.target.value)}
           />
         </div>
-        <div className="input">
+        <div className="form-group">
           <label htmlFor="password">Password</label>
           <input
             id="password"
@@ -73,12 +73,12 @@ function SingUp() {
             onChange={(event) => setPassword(event.target.value)}
           />
         </div>
-        <div className="submit">
-          <button type="submit" className="btnsub" onClick={handelsubmit}>
+        <div className="form-actions">
+          <button type="submit" className="submit-button" onClick={handelsubmit}>
             Sign Up
           </button>
           <Link className="naveget" to={"/signin"}>
-            you have account
+          Already have an account? Sign In
           </Link>
         </div>
       </div>
